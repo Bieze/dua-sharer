@@ -1,0 +1,23 @@
+POST is for adding a new database entry
+PUT is for updating an existing database entry
+GET is for fetching the existing database entry
+DELETE is for deleting the existing database entry
+
+
+
+function writeUserData(userID=12345, name="random", pemail="private@example.com") {
+    set(ref(testdb, 'users/' + userID), {
+        username: name,
+        email: pemail
+    });
+}
+
+writeUserData();
+
+var userID = 12345
+
+const readUserData = ref(testdb, 'users/' + userID);
+onValue(readUserData, (snapshot) => {
+    const data = snapshot.val();
+    console.log(data)
+})
