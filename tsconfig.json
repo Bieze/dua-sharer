@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -14,9 +19,28 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@/*": [
+        "./*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/get-data.js", "testing/testing.js"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/api/get-data.js",
+    "testing/testing.mjs",
+    "firebase/init-firebase.js",
+    "src/context/AuthContext.js",
+    "src/components/navbar.jsx",
+    ".next/types/**/*.ts"
+, "src/context/FirebaseAuth.js", "src/context/FirebaseAuthContext.js", "firebase/initAuth.js", "src/app/register/Register.jsx", "src/app/register/page.tsx", "src/components/Forms/SignUpForm.jsx"  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

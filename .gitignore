@@ -36,3 +36,7 @@ next-env.d.ts
 
 # firebase
 .firebase
+serviceAccountKey.json
+
+# custom
+private.json
